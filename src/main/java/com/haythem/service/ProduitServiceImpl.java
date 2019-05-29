@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.haythem.entities.Produit;
 @Service
-public class ProduitServiceImpl implements IProduitService{
+public class ProduitServiceImpl implements IcrudService<Produit,Long>{
 
 	private List<Produit>produits;
 	
@@ -20,24 +20,24 @@ public class ProduitServiceImpl implements IProduitService{
 	}
 
 	@Override
-	public List<Produit> getProduits() {
+	public List<Produit> getAll() {
 		return produits;
 	}
 
 	@Override
-	public void addProduit(Produit produit) {
+	public void add(Produit produit) {
 		produits.add(produit);
 		
 	}
 
 	@Override
-	public void updateProduit(Produit produit) {
+	public void update(Produit produit) {
 		produits.remove(produit);
 		produits.add(produit);
 	}
 
 	@Override
-	public void deleteProduit(Long id) {
+	public void delete(Long id) {
 		Produit produit= new Produit();
 		produit.setId(id);
 		produits.remove(produit);

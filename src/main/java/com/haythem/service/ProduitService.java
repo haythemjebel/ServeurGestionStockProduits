@@ -10,26 +10,26 @@ import com.haythem.DAO.ProduitRepository;
 import com.haythem.entities.Produit;
 @Service
 @Primary
-public class ProduitService implements IProduitService {
+public class ProduitService implements IcrudService<Produit,Long> {
 	@Autowired
 	private ProduitRepository prodRepository;
 	@Override
-	public List<Produit> getProduits() {
+	public List<Produit> getAll() {
 		return prodRepository.findAll();
 	}
 
 	@Override
-	public void addProduit(Produit produit) {
+	public void add(Produit produit) {
 		prodRepository.save(produit);
 	}
 
 	@Override
-	public void updateProduit(Produit produit) {
+	public void update(Produit produit) {
 		prodRepository.save(produit);
 	}
 
 	@Override
-	public void deleteProduit(Long id) {
+	public void delete(Long id) {
 		Produit p = new Produit();
 		p.setId(id);
 		prodRepository.delete(p);
