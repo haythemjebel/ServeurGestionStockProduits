@@ -13,6 +13,7 @@ import com.haythem.DAO.UserRepository;
 import com.haythem.entities.Produit;
 import com.haythem.entities.Role;
 import com.haythem.entities.User;
+import com.haythem.util.RoleEnum;
 
 @SpringBootApplication
 public class ServeurGestionStockProduitsApplication implements CommandLineRunner{
@@ -32,8 +33,8 @@ public class ServeurGestionStockProduitsApplication implements CommandLineRunner
 //		prodRepository.save(new Produit("cahier",200,5.25f));	
 //		prodRepository.save(new Produit("stylo",500,2.10f));	
 		
-//		Role roleuser=new Role("ROLE_USER");
-//		Role roleadmin=new Role("ROLE_ADMIN");
+		Role roleuser=new Role(RoleEnum.ROLE_USER);
+		Role roleadmin=new Role(RoleEnum.ROLE_ADMIN);
 //		roleRep.save(roleuser);
 //		roleRep.save(roleadmin);
 //		User user= new User("user", "puser", true);

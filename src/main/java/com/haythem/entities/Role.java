@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.haythem.util.RoleEnum;
+
 @Entity
 public class Role implements Serializable {
 	/**
@@ -19,8 +21,8 @@ public class Role implements Serializable {
 	@Column(name="ROLE_ID")
 	private Long id ;
 	private String name ;
-	public Role( String name) {
-		this.name = name;
+	public Role( RoleEnum role) {
+		this.name = role.getName();
 	}
 	public Role() {
 
