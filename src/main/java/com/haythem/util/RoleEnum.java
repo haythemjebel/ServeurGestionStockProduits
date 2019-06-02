@@ -1,7 +1,7 @@
 package com.haythem.util;
 
 public enum RoleEnum {
-	ROLE_USER("ROLE_ADMIN"), ROLE_ADMIN("ROLE_ADMIN");
+	ROLE_USER("ROLE_USER"), ROLE_ADMIN("ROLE_ADMIN");
 
 	private String name;
 
