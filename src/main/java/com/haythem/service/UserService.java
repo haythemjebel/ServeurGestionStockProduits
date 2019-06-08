@@ -35,4 +35,9 @@ public class UserService implements IcrudService<User,Long> {
 		userRepository.delete(u);
 	}
 
+	@Override
+	public void saveAll(Iterable<User> iterable) {
+		userRepository.saveAll(iterable);
+	}
+
 }

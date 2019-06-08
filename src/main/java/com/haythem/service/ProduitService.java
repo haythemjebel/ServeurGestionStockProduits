@@ -35,4 +35,9 @@ public class ProduitService implements IcrudService<Produit,Long> {
 		prodRepository.delete(p);
 	}
 
+	@Override
+	public void saveAll(Iterable<Produit>iterable) {
+		prodRepository.saveAll(iterable);
+	}
+
 }
